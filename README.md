@@ -50,7 +50,6 @@ Settings are stored encrypted at `%AppData%\SpotifyMediaKey\settings.json` using
 
 - Visual Studio 2022 with .NET desktop workload
 - .NET 8 SDK
-- Open solution, restore packages, and press F5
 
 ### License
 
@@ -99,7 +98,6 @@ MIT
 
 - Visual Studio 2022 (.NET デスクトップワークロード)
 - .NET 8 SDK
-- ソリューションを開き、パッケージを復元して F5 を押す
 
 ### ライセンス
 
