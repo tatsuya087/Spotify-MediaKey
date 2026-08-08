@@ -6,7 +6,7 @@ on:
       tag:
         description: "Release Tag"
         required: true
-        default: "v0.0.0"
+        default: "v"
 
 jobs:
   build:
