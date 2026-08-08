@@ -1,0 +1,39 @@
+name: Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release Tag"
+        required: true
+        default: "v0.0.0"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      #アプリ出力
+      - name: Publish app
+        run: dotnet publish Spotify-MediaKey.sln -c Release -o publish_folder
+
+      #ZIPにまとめる
+      - name: Create ZIP archive
+        run: Compress-Archive -Path publish_folder\* -DestinationPath SpotifyMediaKey.zip
+
+      #Releasesを作成してZIPをアップ
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag }}
+          name: Release ${{ github.event.inputs.tag }}
+          files: SpotifyMediaKey.zip
+          draft: true #ドラフトで保存
