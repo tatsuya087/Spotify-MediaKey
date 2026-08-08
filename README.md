@@ -1,4 +1,4 @@
-# <img src="Assets/Logo.ico" width="36" align="center"> Spotify MediaKey
+# <img src="Assets/Logo.ico" width="36"> Spotify MediaKey
 
 Control Spotify directly with media keys, independent of system volume.
 
