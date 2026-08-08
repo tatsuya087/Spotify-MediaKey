@@ -29,7 +29,7 @@ jobs:
 
       #ZIPにまとめる
       - name: Create ZIP archive
-        run: Compress-Archive -Path publish_folder\* -DestinationPath SpotifyMediaKey.zip
+        run: Compress-Archive -Path publish_folder\* -DestinationPath SpotifyMediaKey-${{ github.event.inputs.tag }}.zip
 
       #Releasesを作成してZIPをアップ
       - name: Publish Release
@@ -37,5 +37,5 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.tag }}
           name: Release ${{ github.event.inputs.tag }}
-          files: SpotifyMediaKey.zip
+          files: SpotifyMediaKey-${{ github.event.inputs.tag }}.zip
           draft: true #ドラフトで保存
