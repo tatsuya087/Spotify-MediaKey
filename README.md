@@ -30,12 +30,13 @@ Control Spotify directly with media keys, independent of system volume.
 
 ### Setup
 
-1. Extract the `.zip` file anywhere and run the executable.
-2. On first launch, click "Open Spotify for Developers" to create a new app.
-3. Set the Redirect URI to: `http://127.0.0.1:8888/callback`.
-4. Copy the Client ID and paste it into the setup window.
-5. Approve access when Spotify's consent screen appears.
-6. Your media keys now control Spotify. The app will minimize to the tray.
+1. Download from [Releases](https://github.com/tatsuya087/Spotify-MediaKey/releases).
+2. Extract the `.zip` file anywhere and run the executable.
+3. On first launch, click "Open Spotify for Developers" to create a new app.
+4. Set the Redirect URI to: `http://127.0.0.1:8888/callback`.
+5. Copy the Client ID and paste it into the setup window.
+6. Approve access when Spotify's consent screen appears.
+7. Your media keys now control Spotify. The app will minimize to the tray.
 
 ### Settings
 - Double-click or right-click the tray icon to open the settings window.
@@ -78,12 +79,13 @@ MIT
 
 ### セットアップ
 
-1. `.zip` ファイルを展開し、実行ファイルを起動します。
-2. 初回起動時 `Spotify for Developersを開く` をクリックして新しいアプリを作成します。
-3. Redirect URI を `http://127.0.0.1:8888/callback` に設定します。
-4. Client ID をコピーしてセットアップ画面に貼り付けます。
-5. Spotify の許可画面が表示されたらアクセスを許可します。
-6. これでメディアキーで Spotify を制御できるようになります。アプリはタスクトレイに収まります。
+1. [Releases](https://github.com/tatsuya087/Spotify-MediaKey/releases)からダウンロードします。
+2. `.zip` ファイルを展開し、実行ファイルを起動します。
+3. 初回起動時 `Spotify for Developersを開く` をクリックして新しいアプリを作成します。
+4. Redirect URI を `http://127.0.0.1:8888/callback` に設定します。
+5. Client ID をコピーしてセットアップ画面に貼り付けます。
+6. Spotify の許可画面が表示されたらアクセスを許可します。
+7. これでメディアキーで Spotify を制御できるようになります。アプリはタスクトレイに収まります。
 
 ### 設定
 - トレイアイコンをダブルクリックまたは右クリックで設定画面が開けます。
