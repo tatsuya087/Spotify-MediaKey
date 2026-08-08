@@ -42,14 +42,14 @@ Control Spotify directly with media keys, independent of system volume.
 - Double-click or right-click the tray icon to open the settings window.
 - Available settings: Volume step size, popup visibility, auto-start, and interface language.
 
-### Data
-
-Settings are stored encrypted at `%AppData%\SpotifyMediaKey\settings.json` using Windows DPAPI. They are tied to your user account and cannot be read by other users or machines.
-
-### Building from source
+### Building
 
 - Visual Studio 2022 with .NET desktop workload
 - .NET 8 SDK
+
+### Data
+
+Settings are stored encrypted at `%AppData%\SpotifyMediaKey\settings.json` using Windows DPAPI. They are tied to your user account and cannot be read by other users or machines.
 
 ### License
 
@@ -90,14 +90,14 @@ MIT
 - トレイアイコンをダブルクリックまたは右クリックで設定画面が開けます。
 - 音量ステップ / ポップアップの表示・非表示 / スタートアップ起動 / 言語 の設定が可能です。
 
-### データ
-
-設定は `%AppData%\SpotifyMediaKey\settings.json` に Windows DPAPI で暗号化して保存されます。このパソコンのこのユーザーアカウントにのみアクセス可能です。
-
-### ソースからビルド
+### ビルド
 
 - Visual Studio 2022 (.NET デスクトップワークロード)
 - .NET 8 SDK
+
+### データ
+
+設定は `%AppData%\SpotifyMediaKey\settings.json` に Windows DPAPI で暗号化して保存されます。このパソコンのこのユーザーアカウントにのみアクセス可能です。
 
 ### ライセンス
 
