@@ -107,11 +107,11 @@ namespace SpotifyMediaKey
         {
             if (target.Text == newValue) return;
 
-            var fadeOut = new System.Windows.Media.Animation.DoubleAnimation(1.0, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeOutMs));
+            var fadeOut = new DoubleAnimation(1.0, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeOutMs));
             fadeOut.Completed += (s, e) =>
             {
                 target.Text = newValue;
-                var fadeIn = new System.Windows.Media.Animation.DoubleAnimation(0.0, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
+                var fadeIn = new DoubleAnimation(0.0, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
                 target.BeginAnimation(OpacityProperty, fadeIn);
             };
             target.BeginAnimation(OpacityProperty, fadeOut);
@@ -123,11 +123,11 @@ namespace SpotifyMediaKey
 
             _lastArtworkUrl = newUrl;
 
-            var fadeOut = new System.Windows.Media.Animation.DoubleAnimation(1.0, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeOutMs));
+            var fadeOut = new DoubleAnimation(1.0, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeOutMs));
             fadeOut.Completed += (s, e) =>
             {
                 ArtworkImage.Source = new BitmapImage(new Uri(newUrl));
-                var fadeIn = new System.Windows.Media.Animation.DoubleAnimation(0.0, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
+                var fadeIn = new DoubleAnimation(0.0, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
                 ArtworkImage.BeginAnimation(OpacityProperty, fadeIn);
             };
             ArtworkImage.BeginAnimation(OpacityProperty, fadeOut);
@@ -135,13 +135,13 @@ namespace SpotifyMediaKey
 
         private void FadeIn()
         {
-            var animation = new System.Windows.Media.Animation.DoubleAnimation(Opacity, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
+            var animation = new DoubleAnimation(Opacity, 1.0, TimeSpan.FromMilliseconds(Constants.Osd.FadeInMs));
             BeginAnimation(OpacityProperty, animation);
         }
 
         private void FadeOut()
         {
-            var animation = new System.Windows.Media.Animation.DoubleAnimation(Opacity, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.WindowFadeOutMs));
+            var animation = new DoubleAnimation(Opacity, 0.0, TimeSpan.FromMilliseconds(Constants.Osd.WindowFadeOutMs));
             animation.Completed += (s, e) => Hide();
             BeginAnimation(OpacityProperty, animation);
         }

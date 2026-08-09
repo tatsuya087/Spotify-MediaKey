@@ -76,6 +76,10 @@ namespace SpotifyMediaKey
         private static HttpClient CreateClient()
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", SpotifyAuth.AccessToken);
+
+            _httpClient.DefaultRequestHeaders.AcceptLanguage.Clear();
+            _httpClient.DefaultRequestHeaders.AcceptLanguage.Add(new StringWithQualityHeaderValue(AppSettings.Language));
+
             return _httpClient;
         }
         private static int _volumeBeforeMute = -1;

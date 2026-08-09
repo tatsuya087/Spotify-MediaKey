@@ -155,7 +155,6 @@ namespace SpotifyMediaKey
                 Text = "Spotify MediaKey"
             };
 
-            var menu = new System.Windows.Forms.ContextMenuStrip();
             RefreshTrayMenu();
 
             _trayIcon.DoubleClick += (s, e) => OpenSettingsWindow();
